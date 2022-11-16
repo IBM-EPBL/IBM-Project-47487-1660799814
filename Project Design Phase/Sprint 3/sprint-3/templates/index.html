@@ -1,0 +1,247 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel=stylesheet href="/static/style.css">
+  <!--font-->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Nunito&display=swap" rel="stylesheet">
+  <!--icons-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" >
+  <!--swiper-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  
+  <title>Seek-Job</title>
+
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Search</title>
+
+</head>
+<body>
+   <!--navbar-->
+   <nav class="navbar">
+      <h2 class="navbar-logo"><a href="#"><img src="/static/logo.jpg"></a></h2>
+      <div class="navbar-menu">
+          <a type="button" href="home">Home</a>
+         <a type="button" href="registertemp">Register </a>
+          <a type="button" href="login">Sign In </a>
+      </div>
+      <div class="menu-toggle">
+         <span class="bar"></span>
+         <span class="bar"></span>
+         <span class="bar"></span>
+    </nav>
+    <!--header-->
+    <header>
+       <h1 class="header-title">
+           FIND YOUR <br> <span>PERFECT & DREAM JOB</span> <br> EASILY<br>
+           <marquee width="100%" direction="left" height="100px">
+We are not looking for job seekers. We want changemakers!
+</marquee>
+       </h1>
+       
+       </header>
+<body>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Search</title>
+</head>
+<body>
+  <center>
+<form action="/index" method="post">
+<div class="searchbox">
+   <label>Search here</label>
+   <input type="text" id="skill1" name="skill1" placeholder="Skill1">
+   <button><input type="submit" value="Search"></button>
+</div>
+</form>
+
+<table style="padding:20px; ">
+   <tr>
+     <th>company</th>
+     <th>website</th>
+     <th>position</th>
+     <th>skill1</th>
+     <th>Skill2</th>
+     <th>Skill3</th>
+   </tr>
+   {% for val in tdata %}
+   <tr>
+      <td>{{ val[0] }}</td>
+      <td><a href="{{val[1]}}" >{{ val[1] }}</a></td>
+      <td>{{ val[2] }}</td>
+      <td>{{ val[3] }}</td>
+      <td>{{ val[4] }}</td>
+      <td>{{ val[5] }}</td>
+      <td class="btn"><a href="{{val[1]}}" >Apply Now</a></td>
+      
+   </tr>
+    {% endfor %}
+    </table>
+</form></center>
+
+      
+      <!--Job listing-->
+      <section class="job-list" id="jobs">
+      {% for val in tdata %}
+        <div class="job-card">
+          <div class="job-name">
+            
+             <div class="job-detail">
+                <h4>{{ val[0] }}</h4>
+                <h4><a href="val[1]">{{ val[1] }}</a></h4>
+                <h3>{{ val[2] }}</h3>
+                
+             </div>
+          </div>
+          <div class="job-label">
+             <h5 class="label-a" >{{ val[3] }}</h5>
+              <h5 class="label-b" >{{ val[4] }}</h5>
+               <h5 class="label-c" >{{ val[5] }}</h5>
+          </div>
+          <div class="job-posted">
+          
+        </div>
+        {% endfor %}
+        </div>
+       
+      </section>
+      <!--skills-->
+     <section class="blog" id="blog" style="background-color:#99ccff">
+     <h1 class="section-title">How It Works?</h1>
+     <p>Lets see how the website works?</p>
+      <div class="blog-wrapper">
+        <div class="blog-card" style="background-color:white">
+          <img class="blog-img" src="/static/profile-1.jpg">
+          <div class="blog-detail">
+             <h4>Create an account!</h4>
+           <p>Sign up by creating an account with required details in order to avail our services. The optimal feeding of correct information will help us fine tune your job search</p>
+           <hr class="divider">
+           <a href="#" class="blog-more"></a>
+           </hr>
+          </div>
+        </div>
+         <div class="blog-card" style="background-color:white">
+           <img class="blog-img" src="/static/profile-2.jpg">
+           <div class="blog-detail">
+            <h4>Search for the Job</h4>
+            <p>Providing you with our wide database of job opportunities notified by numerous companies. You can add filters to search your desired jobs and still have a list of options to choose from.</p>
+            <hr class="divider">
+            <a href="#" class="blog-more"></a>
+            </hr>
+           </div>
+         </div>
+         <div class="blog-card" style="background-color:white">
+           <img class="blog-img" src="/static/profile-3.jpg">
+           <div class="blog-detail">
+            <h4>Apply for desired Job</h4>
+            <p>Search for jobs in your field.Research companies with openings.Prepare your resume.Decide if you need a cover letter.Submit your resume and online application</p>
+            <hr class="divider">
+            <a href="#" class="blog-more"></a>
+            </hr>
+           </div>
+         </div>
+      </div>  
+     </section>
+      <!--blog-->
+      <section class="blog" id="blog" >
+      <h1 class="section-title">Career Advices</h1>
+      <p>Learn more Career due tips from company's recruiter</p>
+       <div class="blog-wrapper">
+         <div class="blog-card">
+           <img class="blog-img" src="/static/blog-1.jpg">
+           <div class="blog-detail">
+            <h4>How to enjoy Your Work!</h4>
+            <p>Take breaks. During a busy workday, it is important you take time away from your desk to get your mind off your job</p>
+            <hr class="divider">
+            <a href="#" class="blog-more"></a>
+            </hr>
+           </div>
+         </div>
+          <div class="blog-card">
+            <img class="blog-img" src="/static/blog-2.jpg">
+            <div class="blog-detail">
+             <h4>Tips for Technical interview!</h4>
+             <p>Consider the tools and skills necessary for the role. Think about the basic requirements of the job.
+             Study helpful books and digital publications</p>
+             <hr class="divider">
+             <a href="#" class="blog-more"></a>
+             </hr>
+            </div>
+          </div>
+          <div class="blog-card">
+            <img class="blog-img" src="/static/blog-3.jpg">
+            <div class="blog-detail">
+             <h4>Managing Time effectively!</h4>
+             <p>Group similar tasks together 
+             Assign time limits to tasks
+             Create a daily schedule�and stick with it
+             Avoid the urge to multitask</p>
+             <hr class="divider">
+             <a href="#" class="blog-more"></a>
+             </hr>
+            </div>
+          </div>
+       </div>  
+      </section>
+      <!--footer-->
+       <footer>
+        <div class="footer-wrapper">
+           <h3>Team Details</h3>
+           <p>Team Id : PNT2022TMID49573</p><br>
+           <p>Skill/Job Recommender Application</p>
+           <div class="social-media">
+             <a href="#"><i class="fab fa-facebook-f"></i></a>
+             <a href="#"><i class="fab fa-linkedin-in"></i></a>
+             <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+             
+           </div>
+          
+          
+            
+            <div class="footer-wrapper">
+              <h4>Contacts</h4>
+                <a href="#">arunarun78238@gmail.com</a>
+                <a href="#">basvan@gmail.com</a>
+                 <a href="#">kannacs2002@gmail.com</a>
+                  
+                
+            </div>
+            
+            <div class="footer-wrapper">
+               <h4>Account</h4>
+                 <a href="register.html">Signup/Register</a>
+                 <a href="login.html">Signin/Login</a>
+            </div>
+             <div class="footer-wrapper">
+                <h4>Community</h4>
+                  <a href="#">Community</a>
+                  <a href="#">Invite a friend</a>
+             </div>
+              
+              
+         </footer>  
+      <script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "7cb16381-61ae-455f-8312-8aedf4ae1f9b", // The ID of this integration.
+    region: "au-syd", // The region your integration is hosted in.
+    serviceInstanceID: "7ee7effa-bbb2-471b-a5c1-78adad21acf9", // The ID of your service instance.
+    onLoad: function(instance) { instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+       <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+      <script src="static/app.js"></script>
+      
+</body>
+</html>
